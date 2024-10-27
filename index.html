@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Inmobiliaria: La Casa de tus Sueños</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            overflow-x: hidden; 
+        }
+
+        .video-background {
+            position: fixed; 
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        video {
+            min-width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+        }
+
+        .overlay {
+            position: relative;
+            z-index: 1;
+            background-color: rgba(255, 255, 255, 0.8); 
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="video-background">
+        <video autoplay muted loop>
+            <source src="casa.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <header class="container-fluid bg-primary d-flex justify-content-center">
+        <p class="text-light mb-0 p-2 fs-6">Contactanos: LA CASA DE TUS SUEÑOS</p>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-light p-3 overlay" id="menu">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <span class="fs-5 text-primary fw-bold">La Casa de Tus Sueños.</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#intro">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#servicios-fila-1">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contenedor-formulario">Contacto</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="email" placeholder="Correo Electronico" aria-label="Suscribete">
+                    <button class="btn btn-primary" type="button">Suscribete</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <section class="overlay d-flex flex-column justify-content-center align-items-center pt-5 text-center w-50 m-auto" id="intro">
+        <h1 class="p-3 fs-2 border-top border-3">Una agencia única para todas tus necesidades de <span class="text-primary">Inmobiliaria.</span></h1>
+        <p class="p-3 fs-4">
+            <span class="text-primary">La Casa de Tus Sueños</span> es la agencia donde facilitan las transacciones inmobiliarias y ayudan a sus clientes a encontrar la propiedad adecuada según sus necesidades.
+        </p>
+    </section>
+
+    <section class="w-100">
+        <div class="row w-75 mx-auto overlay" id="servicios-fila-1">       
+            <div class="col-lg-6 col-md-12 col-sm-12 d-flex justify-content-start my-5 icono-wrap">
+                <img src="./compra.jpg" alt="desarrollo" width="180" height="160">
+                <div>
+                    <h3 class="fs-5 mt-4 px-4 pb-1">Gestión de Propiedades</h3>
+                    <p class="px-4">Nos encargamos de la administración integral de propiedades en alquiler y venta.</p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12 d-flex justify-content-start my-5 icono-wrap">
+                <img src="./alquiler.jpg" alt="concepto" width="180" height="160">
+                <div>
+                    <h3 class="fs-5 mt-4 px-4 pb-1 icono-wrap">Asesoramiento</h3>
+                    <p class="px-4">Nuestro equipo de profesionales analiza las necesidades y preferencias de cada cliente, brindando un servicio adaptado a sus requerimientos específicos.</p>
+                </div>
+            </div>   
+        </div>
+        
+        <div class="overlay row w-75 mx-auto mb-5" id="servicios-fila-2">       
+            <div class="col-lg-6 col-md-12 col-sm-12 d-flex justify-content-start my-5 icono-wrap">
+                <img src="./gestion.jpg" alt="comunicaciones" width="180" height="160">
+                <div>
+                    <h3 class="fs-5 mt-4 px-4 pb-1">Marketing y Publicidad</h3>
+                    <p class="px-4">Implementamos estrategias de marketing efectivas para promocionar propiedades.</p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12 d-flex justify-content-start my-5 icono-wrap">
+                <img src="./asesoria.jpg" alt="seo" width="180" height="160">
+                <div>
+                    <h3 class="fs-5 mt-4 px-4 pb-1">Documentación y Trámites Legales:</h3>
+                    <p class="px-4">Facilitamos todo el proceso legal relacionado con las transacciones inmobiliarias.</p>
+                </div>
+            </div>   
+        </div>
+    </section>
+
+    <div class="overlay container border-top border-primary" style="max-width: 500px" id="contenedor-formulario">
+        <div class="text-center mb-4" id="titulo-formulario">
+            <div><img src="./inmobiliaria.jpg" alt="" class="img-fluid ps-5"></div>
+            <h2>Contactanos</h2>
+            <p class="fs-5">Estamos aquí para hacer realidad tus proyectos</p>
+        </div>
+        <form method="POST" data-netlify="true" action="#">     
+            <div class="mb-3">           
+                <input type="email" class="form-control" id="email" name="email" placeholder="nombre@ejemplo.com">
+            </div>
+            <div class="mb-3">            
+                <input type="input" class="form-control" id="name" name="name" placeholder="Jose Centeno">
+            </div>
+            <div class="mb-3">
+                <input type="tel" class="form-control" name="phone" id="phone" placeholder="Teléfono">
+            </div>
+            <div class="mb-3">       
+                <textarea class="form-control" name="message" id="message" rows="4"></textarea>
+            </div>
+            <div class="mb-3">
+                <button type="submit" class="btn btn-primary w-100 fs-5">Enviar Mensaje</button>
+            </div>
+        </form>
+    </div>
+
+    <footer class="overlay w-100 d-flex align-items-center justify-content-center flex-wrap">
+        <p class="fs-5 px-3 pt-3">INMOBILIARIA: La Casa de tus Sueños. &copy; Todos Los Derechos Reservados 2024</p>
+        <div id="iconos">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-twitter"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>  
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script> 
+</body>
+</html>
